@@ -2,8 +2,9 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: prometheus-ingress
-  annotations:
-    <ALB Ingress Controller에 필요한 Annotation>
+  annotations:    
+    alb.ingress.kubernetes.io/scheme: internet-facing #internet-facing or internal
+    alb.ingress.kubernetes.io/target-type: ip
 spec:
   rules:
     - http:
