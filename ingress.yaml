@@ -16,6 +16,6 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: prometheus-server
+              name: argocd-applicationset-controller
               port:
                 number: 9090
